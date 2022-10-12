@@ -2,7 +2,7 @@
 
 class Square:
     pass
-    
+
     """
     Modelling an empty square class
     """
