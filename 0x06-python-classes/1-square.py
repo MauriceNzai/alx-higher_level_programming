@@ -10,7 +10,7 @@ class Square:
 
     def __init__(self, size):
         self.__size = size
-        
+
     """
     initializes a square with parameters
     args:
