@@ -6,30 +6,68 @@ Created on Wed Oct 12 2022
 """
 
 
+
 class Square:
+    """
+    Modelling a square class with instance atttributes
+
+    Attributes:
+        size (int): The size of the square
+    """
 
     def __init__(self, size=0):
+        """The __init__ method to initialise instance attributes
+
+        Args:
+        size: (:obj: 'int', optional): A private instance size
+        """
         self.__size = size
 
     @property
     def size(self):
+        """Gets the size property of the square
+
+        Returns:
+            The size of the square
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
+        """
+        Sets the square properties and checks for errors
+
+        Args:
+            value: Value to check for errors
+
+        Raises:
+            TypeError: Exception is size is not an integer
+            ValueError: Exception if size is less than 0
+        """
         if(type(value) is not int):
             raise TypeError("size must be an integer")
-        if(value < 0):
+        elif(value < 0):
             raise ValueError("size must be >= 0")
-        self.__size = value
+        else:
+            self.__size = value
 
     def area(self):
-        return(self.__size**2)
+        """Calculates the area of the square
+
+        Returns:
+            The area of the square
+        """
+        return(self.__size ** 2)
 
     def my_print(self):
-        if(self.size):
-            for x in range(self.size):
-                print("#" * self.size, end='')
-                print()
-        else:
+    """
+    Print a square using # character
+    """
+
+    if self.__size == 0:
+    print()
+    else:
+        for i in range(self.size):
+            for j in range(self.size):
+                print('#', end='')
             print()
