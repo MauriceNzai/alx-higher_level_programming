@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Oct 12 2022
+@author: Maurice Haro
+"""
 class Square:
     """
     Modelling a square class with attributes and instatiates with size
