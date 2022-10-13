@@ -7,8 +7,7 @@ Created on Wed Oct 12 2022
 
 
 class Square:
-    """
-    Modelling a square class with instance atttributes
+    """Modelling a square class with instance atttributes
 
     Attributes:
         size (int): The size of the square
@@ -18,7 +17,7 @@ class Square:
         """The __init__ method to initialise instance attributes
 
         Args:
-        size: (:obj: 'int', optional): A private instance size
+            size: (:obj: 'int', optional): A private instance size
         """
         self.__size = size
 
