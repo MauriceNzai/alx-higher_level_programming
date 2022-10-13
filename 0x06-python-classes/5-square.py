@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Oct 12 2022
+@author: Maurice Haro
+"""
+
+
 class Square:
 
     def __init__(self, size=0):
