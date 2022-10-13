@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
 class Square:
-
     """
     Modelling a square class with private attribute size
     and instantiation with optional size
@@ -21,7 +19,6 @@ class Square:
 
     def area(self):
         return (self.__size**2)
-
     """
     Returns the area of square based on size attribute
     """

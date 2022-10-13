@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
 class Square:
-
     """
     Modelling a square class
     and defines it by attribut size
@@ -10,7 +8,6 @@ class Square:
 
     def __init__(self, size):
         self.__size = size
-
     """
     initializes a square with parameters
     args:
