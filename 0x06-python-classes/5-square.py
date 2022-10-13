@@ -63,7 +63,7 @@ class Square:
         Print a square using # character
         """
 
-    if self.__size == 0:
+    if (self.__size == 0):
         print()
     else:
         for i in range(self.size):
