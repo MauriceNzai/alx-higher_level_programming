@@ -24,7 +24,6 @@ class Square:
         self.size = size
         self.position = position
 
-
     @property
     def size(self):
         """Gets the property size
@@ -32,7 +31,7 @@ class Square:
             The size of the square
         """
         return self.__size
-        
+
     @property
     def position(self):
         """Gets the property position
@@ -40,7 +39,7 @@ class Square:
             The tuples position
         """
         return self.__position
-        
+
     @position.setter
     def position(self, value):
         """
@@ -52,15 +51,14 @@ class Square:
         Raises:
             TypeError: Exceptionif size is not an integer
         """
-        if(type(value) is not tuple or len(value) is not 2 or
+        if (type(value) is not tuple or len(value) is not 2 or
            type(value[0]) is not int or
            type(value[1]) is not int):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if(value[0] < 0 or value[1] < 0):
+        if (value[0] < 0 or value[1] < 0):
             raise ValueError("position must be a tuple of 2 positive integers")
         self.__position = value
 
-        
     @size.setter
     def size(self, value):
         """
@@ -73,9 +71,9 @@ class Square:
             TypeError: Exception if size is not an integer
             ValueError: Exception if size is less than 0
         """
-        if(type(value) is not int):
+        if (type(value) is not int):
             raise TypeError("size must be an integer")
-        elif(value < 0):
+        elif (value < 0):
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
@@ -87,13 +85,13 @@ class Square:
         Returns:
             Area of the square
         """
-        return(self.__size**2)
-        
+        return (self.__size**2)
+
     def my_print(self):
         """
         Print a square using # character
         """
-        if(self.size == 0):
+        if (self.size == 0):
             print()
         else:
             for i in range(self.position[1]):
