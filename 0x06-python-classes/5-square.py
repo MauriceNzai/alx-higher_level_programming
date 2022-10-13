@@ -6,7 +6,6 @@ Created on Wed Oct 12 2022
 """
 
 
-
 class Square:
     """
     Modelling a square class with instance atttributes
