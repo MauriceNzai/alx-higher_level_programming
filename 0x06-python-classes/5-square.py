@@ -43,9 +43,9 @@ class Square:
             TypeError: Exception is size is not an integer
             ValueError: Exception if size is less than 0
         """
-        if(type(value) is not int):
+        if (type(value) is not int):
             raise TypeError("size must be an integer")
-        elif(value < 0):
+        elif (value < 0):
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
@@ -56,15 +56,15 @@ class Square:
         Returns:
             The area of the square
         """
-        return(self.__size ** 2)
+        return (self.__size ** 2)
 
     def my_print(self):
-    """
-    Print a square using # character
-    """
+        """
+        Print a square using # character
+        """
 
     if self.__size == 0:
-    print()
+        print()
     else:
         for i in range(self.size):
             for j in range(self.size):
