@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """
-square class
+Created on Wed Oct 12 2022
+@author: Maurice Haro
 """
 
 
