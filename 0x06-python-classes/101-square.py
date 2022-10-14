@@ -32,7 +32,7 @@ class Square:
         for i in range(0, self.size):
             for j in range(self.position[0]):
                 rtn += " "
-            for k in range(self.size - 1):
+            for k in range(self.size):
                 rtn += "#"
             if i is not (self.size - 1):
                 rtn += "\n"
@@ -77,14 +77,19 @@ class Square:
         Raises:
             TypeError: Exceptionif size is not an integer
         """
-        if (type(value) is not tuple or len(value) is not 2 or
-           type(value[0]) is not int or
-           type(value[1]) is not int):
+        if not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if (value[0] < 0 or value[1] < 0):
-            raise ValueError("position must be a tuple of 2 positive integers")
+        if len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value[0], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value[1], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+            
         self.__position = value
-
+        
     @size.setter
     def size(self, value):
         """
@@ -122,7 +127,7 @@ class Square:
         else:
             for i in range(self.position[1]):
                 print()
-            for i in range(self.size):
+            for i in range(0, self.size):
                 for j in range(self.position[0]):
                     print(" ", end="")
                 for k in range(self.size):
