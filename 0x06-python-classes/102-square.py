@@ -11,37 +11,37 @@ class Square:
     Modelling a square class with instance attribute size
     """
 
-    def __equal__(self, other):
+    def __eq__(self, other):
         """
         Checks for equality of two squares
         """
         return self.__size == other.__size
 
-    def __less_than__(self, other):
+    def __lt__(self, other):
         """
         Checks if is less than
         """
         return self.__size < other.__size
 
-    def __less_equal__(self, other):
+    def __le__(self, other):
         """
         Checks if less than or equal to
         """
         return self.__size <= other.__size
 
-    def __not_equal__(self, other):
+    def __ne__(self, other):
         """
         Checks if not equal to
         """
         return self.__size != other.__size
 
-    def __greater_than__(self, other):
+    def __gt__(self, other):
         """
         Checks if greater than
         """
         return self.__size > other.__size
 
-    def __greater_equal__(self, other):
+    def __ge__(self, other):
         """
         Checks if greater than or equal to
         """
@@ -49,20 +49,20 @@ class Square:
     
 
     def __init__(self, size=0):
+        """
+        initializes a square size attributes
+        Args:
+            __size(int): size of square private property
+        """
         self.__size = size
-    """
-    initializes a square size attributes
-    Args:
-        __size(int): size of square private property
-    """
 
     @property
     def size(self):
+        """
+        Property getter
+        Gets size of square
+        """
         return self.__size
-    """
-    Property getter
-    Gets size of square
-    """
 
     @size.setter
     def size(self, value):
