@@ -1,20 +1,20 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct 12 2022
+Created on Fri Oct 14 2022
 @author: Maurice Haro
 """
 
 
 class Square:
-    """Modelling a square class with attiributes and instantiation with size
+    """Class Square that has attributes. Instantiation with size
 
     Attributes:
         size (int): The size of the square
     """
 
     def __init__(self, size=0):
-        """The __init__ method to initialise instance attributes
+        """The __init__ method for Square class
 
         Args:
             size: (:obj: 'int', optional): A private instance size
@@ -23,7 +23,7 @@ class Square:
 
     @property
     def size(self):
-        """Gets the size property of the square
+        """Call the function to checking property
 
         Returns:
             The size of the square
@@ -32,19 +32,18 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """
-        Sets the square properties and checks for errors
+        """check errors and setter for size attribute
 
         Args:
-            value: Value to check for errors
+            value: Value to checking errors
 
         Raises:
-            TypeError: Exception is size is not an integer
+            TypeError: Exception if size is not an integer
             ValueError: Exception if size is less than 0
         """
-        if (type(value) is not int):
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        elif (value < 0):
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
@@ -55,17 +54,15 @@ class Square:
         Returns:
             The area of the square
         """
-        return (self.__size ** 2)
+        return self.__size ** 2
 
     def my_print(self):
+        """Print a square using # character
         """
-        Print a square using # character
-        """
-
-    if (self.__size == 0):
-        print()
-    else:
-        for i in range(self.size):
-            for j in range(self.size):
-                print('#', end='')
+        if self.__size == 0:
             print()
+        else:
+            for i in range(self.size):
+                for j in range(self.size):
+                    print("#", end="")
+                print()
