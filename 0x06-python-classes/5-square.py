@@ -8,7 +8,7 @@ Created on Wed Oct 12 2022
 
 class Square:
     """Modelling a square class with attiributes and instantiation with size
-    
+
     Attributes:
         size (int): The size of the square
     """
