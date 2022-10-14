@@ -46,7 +46,6 @@ class Square:
         Checks if greater than or equal to
         """
         return self.__size >= other.__size
-    
 
     def __init__(self, size=0):
         """
@@ -74,7 +73,7 @@ class Square:
         if (value < 0):
             raise ValueError("size must be >= 0")
         self.__size = value
-       
+
     def area(self):
         return (self.__size ** 2)
         """
