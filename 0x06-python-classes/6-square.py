@@ -92,14 +92,14 @@ class Square:
         """
         Print a square using # character
         """
-        if (self.size == 0):
+        if (self.__size == 0):
             print()
         else:
             for i in range(self.position[1]):
                 print()
             for i in range(self.size):
                 for j in range(self.position[0]):
-                    print(end="")
+                    print(end=" ")
                 for k in range(self.size):
                     print("#", end="")
                 print()
