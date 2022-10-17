@@ -19,7 +19,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """
         The init method to initialise the instance varables
-        
+
         Attributes:
             width (int, optional): The width of the rectangle
             height (int, optional): The height of the rectngle
