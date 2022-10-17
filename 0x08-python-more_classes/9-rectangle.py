@@ -35,6 +35,19 @@ class Rectangle:
         self.__height = height
         Rectangle.number_of_instances += 1
 
+    @classmethod
+    def square(cls, size=0):
+        """
+        Makes a square (width == height == size)
+
+        Args:
+            size: Th size of the square rectangle (width == height)
+
+        Returns:
+            The square rectangle (width == height == size)
+        """
+        return cls(size, size)
+
     @property
     def height(self):
         """
@@ -173,16 +186,3 @@ class Rectangle:
                 return rect_1
             else:
                 return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        """
-        Determines if width of rectangle == height of rectangle
-
-        Args:
-            size: size of the square (i.e width == height)
-
-        Returns:
-            size: The size of the square
-        """
-        return cls(size, size)
