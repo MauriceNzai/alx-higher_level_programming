@@ -10,7 +10,7 @@ Created on Tue Oct 18 2022
 def say_my_name(first_name, last_name=""):
     """
     Prints the "My name is + first and last name
-    
+
     Args:
         first_name (str): First string to print
         last_name (str): Second string to print
@@ -20,7 +20,7 @@ def say_my_name(first_name, last_name=""):
     """
     if type(first_name) is not str:
         raise TypeError("first name must be a string")
-            
+
     elif type(last_name) is not str:
         raise TypeError("last name must be a string")
     else:
