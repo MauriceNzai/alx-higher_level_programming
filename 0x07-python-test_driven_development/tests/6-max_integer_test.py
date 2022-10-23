@@ -69,7 +69,6 @@ class TestMaxInteger(unittest.TestCase):
         test_list = [-7, -2, -9, -4, -5]
         self.assertEqual(max_integer(test_list), max(test_list))
 
-
     def test_positive_negative(self):
         """
         Test case with list of both positive and negative integers
@@ -77,7 +76,6 @@ class TestMaxInteger(unittest.TestCase):
         """
         test_list = [-1, 7, -2, 9, 3, -4, 5, -10]
         self.assertEqual(max_integer(test_list), max(test_list))
-
 
     def test_Positive_floats(self):
         """
@@ -87,7 +85,6 @@ class TestMaxInteger(unittest.TestCase):
         test_list = [1.3, 44.02, 2.36, 33.3, 33.0, 15.6]
         self.assertEqual(max_integer(test_list), max(test_list))
 
-
     def test_negative_floats(self):
         """
         Test case with list of negative floats
@@ -95,7 +92,6 @@ class TestMaxInteger(unittest.TestCase):
         """
         test_list = [-1.3, -44.02, -2.36, -33.3, -33.0, -15.6]
         self.assertEqual(max_integer(test_list), max(test_list))
-
 
     def test_-tive_+tive_floats(self):
         """
