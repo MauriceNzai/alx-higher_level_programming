@@ -35,12 +35,13 @@ class rectangle
 inherits class basegeometry
 """
 
+
 class Rectangle(BaseGeometry):
     """
     creates a rectangle class
     initialized with width and height
     """
-    def __init__(self,width, height):
+    def __init__(self, width, height):
         """
         initializing instance attributes
         """
