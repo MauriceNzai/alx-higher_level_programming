@@ -19,4 +19,7 @@ def clas_to_json(obj):
     Return:
         A JSON representation
     """
-    return (obj.__dict__)
+    dic = {}
+    if hasattr(obj, "__dict__"):
+        dic = obj.__dict__.copy()
+    reurn dic
