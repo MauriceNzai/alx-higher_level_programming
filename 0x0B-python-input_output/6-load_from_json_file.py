@@ -11,14 +11,9 @@ import json
 
 def load_from_json_file(filename):
     """
-     Loads an object from JSON file
-
-     Arguments:
-        filename (str): Name of the file
-
-    Return:
-        A file with the text in JSON format
+    Function that creates an Object from a JSON file
+    Args:
+        filename: textfile name
     """
-
-    with open(filename, mode='r', encoding='utf-8') as f:
-        return (json.loads(f))
+    with open(filename, 'r', encoding="utf-8") as f:
+        return json.load(f)
