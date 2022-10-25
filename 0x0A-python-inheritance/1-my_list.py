@@ -7,6 +7,7 @@ Module created on Mon 24 Oct 2022
 
 """
 
+
 class MyList(list):
     """
     inherits attributes of the list class
