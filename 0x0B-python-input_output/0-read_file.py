@@ -12,5 +12,5 @@ def read_file(filename=""):
     reads a file and displays to stdo
     """
     with open(filename, mode='r', encoding='utf-8') as f:
-        for line in f:
-            print(line, end="")
+        read_date = f.read()
+            print(read_data, end="")
