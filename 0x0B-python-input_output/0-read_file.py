@@ -5,6 +5,8 @@ Created on Tue Oct, 25 2022
 
 @author: Maurice Haro
 """
+
+
 def read_file(filename=""):
     """
     reads a file and displays to stdo
