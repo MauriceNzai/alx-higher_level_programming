@@ -22,4 +22,4 @@ def clas_to_json(obj):
     dic = {}
     if hasattr(obj, "__dict__"):
         dic = obj.__dict__.copy()
-    reurn dic
+    return dic
