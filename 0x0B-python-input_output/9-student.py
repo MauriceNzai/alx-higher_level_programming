@@ -8,7 +8,6 @@ Created on Wed Oct, 26 2022
 """
 
 
-
 class Student:
     """
     Defines student by publice instance variables
@@ -29,7 +28,7 @@ class Student:
         """
         self.first_name = first_name
         self.last_name = last_name
-        self.age =  age
+        self.age = age
 
         def to_json(self):
             """
@@ -38,4 +37,3 @@ class Student:
             Return: dictionary representation
             """
             return (self.__dict__.copy())
-
