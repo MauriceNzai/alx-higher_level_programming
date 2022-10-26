@@ -39,4 +39,3 @@ def pascal_triangle(n):
         prev = my_list[:]
 
     return matrix
-
