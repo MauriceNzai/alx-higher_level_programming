@@ -8,7 +8,7 @@ Created on Tue Oct, 25 2022
 """
 
 
-def clas_to_json(obj):
+def class_to_json(obj):
     """
     Creates a JSON representation of an object
 
