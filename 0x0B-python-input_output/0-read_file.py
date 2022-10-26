@@ -6,6 +6,7 @@ Created on Tue Oct, 25 2022
 @author: Maurice Haro
 """
 
+
 def read_file(filename=""):
     """reads a file"""
     with open(filename, mode='r', encoding='utf-8') as f:
