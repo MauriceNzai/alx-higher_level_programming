@@ -3,7 +3,7 @@
 Module to test the Base class and its methods
 """
 import unittest
-import models
+from models.base import Base
 import io
 
 

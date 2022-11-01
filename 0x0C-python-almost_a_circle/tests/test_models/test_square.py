@@ -3,8 +3,11 @@
 Module to test the Square class and its methods
 """
 import unittest
-import io
-import models
+from io import StringIO
+from unittest.mock import patch
+from models.square import Square
+from models.base import Base
+from models.rectangle import Rectangle
 
 
 class TestSquare(unittest.TestCase):
@@ -64,7 +67,7 @@ class TestSquare(unittest.TestCase):
         """
         with self.assertRaises(TypeError):
             new = Square()
-        with self.asserTRaises(TypeError):
+        with self.assertRaises(TypeError):
             new = Square(5, 1, 2, 3, 4)
 
     def test_access_private_attrs(self):
@@ -89,14 +92,14 @@ class TestSquare(unittest.TestCase):
             new = Square(5, 1, "2", 3)
         with self.assertRaises(ValueError):
             new = Square(0)
-        with self.AssertRaises(ValueError):
+        with self.assertRaises(ValueError):
             new = Square(-5)
 
     def test_area(self):
         """
         tests return value of area() method
         """
-        new = square(2)
+        new = Square(2)
         self.assertEqual(new.area(), 4)
 
         new.size = 5
@@ -122,7 +125,7 @@ class TestSquare(unittest.TestCase):
             print(json_dictionary)
             self.assertEqual(string_out.getvalue(), result.replace("'", "\""))
 
-    def test_create_method(sefl):
+    def test_create_method(self):
         """
         tests the create() method
         """
