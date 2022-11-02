@@ -129,10 +129,7 @@ class Base():
         """
         filename = "{}.csv".format(cls.__name__)
 
-        try:
-            csvs = [x.to_dictionary() for x in list_objs]
-        except:
-            csvs = '[]'
+        csvs = [x.to_dictionary() for x in list_objs]
         keys = csvs[0].keys()
         with open(filename, 'w') as f:
             writer = csv.DictWriter(f, keys)
@@ -152,11 +149,8 @@ class Base():
         with open(filename, 'r') as f:
             reader = csv.DictReader(f)
             csv_list = [row for row in reader]
-
             for row in csv_list:
                 for key, value in row.items():
-                    try:
-                        row[key] = int(value)
-                    except:
-                        pass
+                    row[key] = int(value)
+
         return [cls.create(**dic) for dic in csv_list]
