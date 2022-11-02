@@ -7,6 +7,8 @@ Created on Thur Oct, 27 2022
 @author: Maurice Haro
 """
 import json
+import csv
+import os
 
 
 class Base():
@@ -119,3 +121,42 @@ class Base():
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return "[]"
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        serializes in CSV
+        """
+        filename = "{}.csv".format(cls.__name__)
+
+        try:
+            csvs = [x.to_dictionary() for x in list_objs]
+        except:
+            csvs = '[]'
+        keys = csvs[0].keys()
+        with open(filename, 'w') as f:
+            writer = csv.DictWriter(f, keys)
+            writer.writeheader()
+            writer.writerows(csvs)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        deserializes/loads a CSV file
+        """
+        filename = "{}.csv".format(cls.__name__)
+
+        if not os.path.isfile(filename):
+            return []
+
+        with open(filename, 'r') as f:
+            reader = csv.DictReader(f)
+            csv_list = [row for row in reader]
+
+            for row in csv_list:
+                for key, value in row.items():
+                    try:
+                        row[key] = int(value)
+                    except:
+                        pass
+        return [cls.create(**dic) for dic in csv_list]
