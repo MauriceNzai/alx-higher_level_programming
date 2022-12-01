@@ -4,10 +4,10 @@
 -- Script should not fail if table and/or database already exists
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa
 -- use the new database
-use hbtn_0d_usa;
+USE hbtn_0d_usa;
 -- create the new table
 CREATE TABLE IF NOT EXISTS cities(
-	id INT NOT NULL AUTO_INCREMENT UNIQUE(id),
+	id INT NOT NULL AUTO_INCREMENT UNIQUE,
 	state_id INT NOT NULL,
        	name VARCHAR(256) NOT NULL,
        	PRIMARY KEY (id),
