@@ -3,6 +3,6 @@
 -- Results sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
 -- Name of the database will be passed as an argument of the mysql command
 
-SELECT cities.id, cities.name, states.name FROM cities
-INNER JOIN states ON cities.state_id = states.id
-ORDER BY cities.id ASC;
+SELECT ts.title, tg.genre_id FROM tv_shows ts, tv_show_genres tg
+WHERE ts.id = tg.show_id
+ORDER BY ts.title ASC, tg.genre_id ASC;
