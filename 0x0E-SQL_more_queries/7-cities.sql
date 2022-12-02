@@ -2,7 +2,7 @@
 -- can't be null and is primary key
 -- Name of the database will be passed as an argument of the mysql command
 -- Script should not fail if table and/or database already exists
-CREATE DATABASE IF NOT EXISTS hbtn_0d_usa
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 -- use the new database
 USE hbtn_0d_usa;
 -- create the new table
