@@ -3,6 +3,6 @@
 -- Name of the database will be passed as an argument of the mysql command
 
 -- create the main query followed by the subquery
-SELECT cities.id, cities.name FROM cities, states
-WHERE cities.state_id = states.id
+SELECT id, name FROM cities
+WHERE state_id = (SELECT id FROM states WHERE name = California)
 ORDER BY cities.id ASC;
