@@ -4,5 +4,5 @@
 
 -- create the main query followed by the subquery
 SELECT cities.id, cities.name FROM cities, states
-WHERE states.name = California
+WHERE cities.state_id = states.id
 ORDER BY cities.id ASC;
