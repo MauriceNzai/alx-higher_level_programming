@@ -27,4 +27,4 @@ class Square extends Rectangle {
 	}
 }
 
-modeule.exports = Rectangle;
+module.exports = Rectangle;
