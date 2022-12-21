@@ -14,4 +14,4 @@ class Rectangle {
 	}
 }
 
-modeule.exports = Rectangle;
+module.exports = Rectangle;
