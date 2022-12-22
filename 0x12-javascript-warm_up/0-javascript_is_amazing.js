@@ -1,3 +1,3 @@
 #!/usr/bin/node
-const msg = 'Javascript is amazing';
+const msg = 'JavaScript is amazing';
 console.log(msg);
