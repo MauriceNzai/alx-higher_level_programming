@@ -12,7 +12,7 @@ def main(args):
                         passwd = args[2], db = args[3])
     cur = db.cursor()
     cur.execute(
-            "SELECT * FROM states WHERE name like '{}' ORDER BY id ASC"
+            "SELECT * FROM states WHERE name like '{}' ORDER BY id ASC",
             .format(args[4]))
     states = cur.fetchall()
     for state in states:
