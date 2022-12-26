@@ -8,8 +8,8 @@ def main(args):
     """
     if len(args) != 4:
         raise Exception("need 3 arguments!")
-    db = MySQLdb.connect(host = "localhost", user = args[1],
-                        passwd = args[2], db = args[3])
+    db = MySQLdb.connect(
+            host="localhost", user=args[1], passwd=args[2], db=args[3])
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
     states = cur.fetchall()
