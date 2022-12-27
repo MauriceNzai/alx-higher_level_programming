@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-# sql alchemy Model_city 
+"""
+sql alchemy Model_city 
+"""
+
+
 from sqlalchemy import create_engine
 from sqlalchemy import MetaData
 from sqlalchemy.orm import sessionmaker
