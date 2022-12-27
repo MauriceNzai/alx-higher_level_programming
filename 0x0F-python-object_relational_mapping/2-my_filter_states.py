@@ -10,8 +10,8 @@ def main(args):
     """
     if len(args) != 5:
         raise Exception("need 4 arguments!")
-    db = MySQLdb.connect(host = "localhost", user = args[1],
-                        passwd = args[2], db = args[3])
+    db = MySQLdb.connect(
+            host="localhost", user=args[1], passwd=args[2], db=args[3])
     cur = db.cursor()
     cur.execute(
             "SELECT * FROM states WHERE name like '{}' ORDER BY id ASC",
