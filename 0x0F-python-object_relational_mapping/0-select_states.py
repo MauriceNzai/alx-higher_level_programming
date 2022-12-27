@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# gets all states via python
+"""
+contains a function main() that gets all states via python
+"""
 
 
 def main(args):
