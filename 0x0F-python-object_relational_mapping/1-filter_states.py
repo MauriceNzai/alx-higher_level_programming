@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-gets all states that start with N via python
+contains a function main() that gets all states that start with N via python
 """
 
 
