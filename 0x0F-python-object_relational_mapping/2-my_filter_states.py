@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# gets all states that  rgument passse by user
+"""
+contains a function main() that gets all states that  rgument passse by user
+"""
 
 
 def main(args):
