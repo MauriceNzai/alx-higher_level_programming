@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# gets all states that start with N via python
+"""
+gets all states that start with N via python
+"""
 
 
 def main(args):
