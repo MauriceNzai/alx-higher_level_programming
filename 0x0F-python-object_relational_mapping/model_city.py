@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-# sql alchemy model city
+"""
+sql alchemy model city
+"""
+
+
 from sqlalchemy import Column, Integer, String
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship
