@@ -14,8 +14,8 @@ def main(args):
             host="localhost", user=args[1], passwd=args[2], db=args[3])
     cur = db.cursor()
     cur.execute(
-            "SELECT * FROM states WHERE name like '{}' ORDER BY id ASC",
-            .format(args[4]))
+            "SELECT * FROM states
+            WHERE name like '{}' ORDER BY id ASC",format(args[4]))
     states = cur.fetchall()
     for state in states:
         if state[1] == state[4]:
