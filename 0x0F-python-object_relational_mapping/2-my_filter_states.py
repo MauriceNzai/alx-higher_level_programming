@@ -18,7 +18,7 @@ def main(args):
                     WHERE name LIKE '{}' ORDER BY id ASC".format(args[4]))
     states = cur.fetchall()
     for state in states:
-        if state[1] == state[4]:
+        if state[1] == args[4]:
             print(state)
 
 
