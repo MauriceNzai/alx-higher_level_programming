@@ -16,7 +16,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = sessions.query(State).filter(
+    state = session.query(State).filter(
             State.name == sys.argv[4]).first()
     try:
         print("{}".format(state.id))
