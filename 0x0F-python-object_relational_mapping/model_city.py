@@ -12,7 +12,10 @@ from sqlalchemy.orm import relationship
 
 
 class City(Base):
-    # creates city
+    """
+    creates city
+    """
+
     __tablename__ = 'cities'
 
     id = Column(Integer, primary_key=True)
