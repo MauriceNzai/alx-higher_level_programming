@@ -19,7 +19,7 @@ if __name__ == "__main__":
     ls = State(name='Louisiana')
     session.add(ls)
     session.commit()
-    state = sessions.query(State).filter(
+    state = session.query(State).filter(
             State.name == 'Louisiana').first()
     print("{}".format(state.id))
     session.close()
