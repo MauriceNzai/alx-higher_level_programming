@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains a function that gets 
+Contains a function that gets
 """
 
 
